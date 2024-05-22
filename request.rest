@@ -1,0 +1,86 @@
+// create user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "bintang",
+    "email": "bintang@gmail.com",
+    "password": "123",
+    "confPassword": "123",
+    "role": "admin"
+}
+
+###
+// get all users
+GET http://localhost:3000/users
+
+
+###
+# get single user
+GET http://localhost:3000/users/dfa1980e-e462-42c3-bdd1-1b48f3ef93a4
+
+###
+# Update user
+PATCH http://localhost:3000/users/dfa1980e-e462-42c3-bdd1-1b48f3ef93a4
+Content-Type: application/json
+
+{
+    "name": "Pasha update",
+    "email": "Pasha@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+# Delete user
+DELETE http://localhost:3000/users/dfa1980e-e462-42c3-bdd1-1b48f3ef93a4
+
+
+### get bug!
+# Login User
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "bintang@gmail.com",
+    "password": "123123"
+}
+
+###
+# identitas user
+GET http://localhost:3000/me
+
+###
+# Logout
+DELETE http://localhost:3000/logout
+
+###
+GET http://localhost:3000/products
+
+###
+GET http://localhost:3000/products/dfa1980e-e462-42c3-bdd1-1b48f3ef93a4
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "sayuran",
+    "price": 10000
+}
+
+###
+PATCH http://localhost:3000/products/dfa1980e-e462-42c3-bdd1-1b48f3ef93a4
+Content-Type: application/json
+
+{
+    "name": "product update",
+    "price": 90000
+}
+
+
+###
+# Logout
+DELETE http://localhost:3000/products/dfa1980e-e462-42c3-bdd1-1b48f3ef93a4
+
